@@ -18,7 +18,9 @@ As mentioned, OS-CFAR and TM-CFAR detectors are based on the Ordered Statistics 
 <img align="center" src="https://github.com/reza-ghaderi/CHA-CFAR/blob/main/assets/table.png" style="display:block;margin:auto;width:95%" alt="drawing" />
        
 
-In the following simulations, we use the results of the CA-CFAR detector in a homogeneous environment as an optimal bound, which called Ideal. As expected, all detectors have the same performance in a homogeneous environment in Fig. 1 ($P_{\textrm{fa}} = 10^{-3}$ and  $N = 32$).
+In the following simulations, we use the results of the CA-CFAR detector in a homogeneous environment as an optimal bound, which called Ideal. 
+Fig. 1 plots $P_{\textrm{d}}$ and $P{\textrm{fa}}$ of different detectors versus SCR (the ratio of target power or outliers power to the noise power).
+As expected, all detectors have the same performance in a homogeneous environment in Fig. 1 ($P_{\textrm{fa}} = 10^{-3}$ and  $N = 32$).
 
 <img src="https://github.com/reza-ghaderi/CHA-CFAR/blob/main/figure/pd1.png" style="width:49%" alt="drawing" /><img src="https://github.com/reza-ghaderi/CHA-CFAR/blob/main/figure/pfa1.png" style="width:49%" alt="drawing">
 
