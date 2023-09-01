@@ -2,7 +2,7 @@ clc;clearvars;close all
 addpath('functions/');
 
 % ---------------------------------------------------------
-% ------------------  Parameters -------------------------
+% ------------------  Parameters --------------------------
 % ---------------------------------------------------------
 iteration = 1000000;                 % Number of iterations
 Number_Intefering_target= 15;        % Number of Intefering target
@@ -12,7 +12,7 @@ window_size = 32;                    % Size of sliding window
 SNR_dB = -5:2:40;                    % SNR range in decible
 
 % ---------------------------------------------------------
-% ------------------ CFAR Parameters ---------------------
+% ------------------ CFAR Parameters ----------------------
 % ---------------------------------------------------------
 T_CA=(pfa.^(-1/window_size))-1;                     % CA-CFAR
 Th_Os=4.12; k_Os = window_size*7/8;                 % OS-CFAR
