@@ -2,7 +2,7 @@ clc;clearvars;close all
 addpath('functions/');
 
 % ---------------------------------------------------------
-% ------------------  Parameteres -------------------------
+% ------------------  Parameters -------------------------
 % ---------------------------------------------------------
 iteration = 1000000;                 % Number of iterations
 Number_Intefering_target= 15;        % Number of Intefering target
@@ -12,7 +12,7 @@ window_size = 32;                    % Size of sliding window
 SNR_dB = -5:2:40;                    % SNR range in decible
 
 % ---------------------------------------------------------
-% ------------------ CFAR Parameteres ---------------------
+% ------------------ CFAR Parameters ---------------------
 % ---------------------------------------------------------
 T_CA=(pfa.^(-1/window_size))-1;                     % CA-CFAR
 Th_Os=4.12; k_Os = window_size*7/8;                 % OS-CFAR
@@ -40,7 +40,7 @@ for i=1:L
     [Pfa_TM(i,1),Pd_TM(i,1)]=TM_CFAR(secondary_data,X_CUT_H1,X_CUT_H0,Th_TM,k1_TM,k2_TM);
     [Pfa_WAI(i,1),Pd_WAI(i,1)]=WAI_CFAR(secondary_data,X_CUT_H1,X_CUT_H0,T_WAI,n_WAI);
 
-    % if the number of interfering target is not zero calculate ideal bound
+    % If the number of interfering targets is not zero calculate ideal bound
     if(Number_Intefering_target)
         secondary_data = exprnd(landa,[iteration,window_size]);
         X_CUT_H1=exprnd(landa*(1+SNR(i)),[iteration,1]);
