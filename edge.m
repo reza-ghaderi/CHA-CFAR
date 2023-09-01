@@ -2,7 +2,7 @@ clc;clearvars;close all
 addpath('functions/');
 
 % ---------------------------------------------------------
-% ------------------  Parameteres -------------------------
+% ------------------  Parameters --------------------------
 % ---------------------------------------------------------
 iteration = 1000000;                % Number of iterations
 landa1 = 1; landa2 = 10;            % Mean of exponential distribution
@@ -11,7 +11,7 @@ window_size = 32;                   % Size of sliding window
 SNR_dB = 20;                        % SNR in decible
 
 % ---------------------------------------------------------
-% ------------------ CFAR Parameteres ---------------------
+% ------------------ CFAR Parameters ----------------------
 % ---------------------------------------------------------
 T_CA=(pfa.^(-1/window_size))-1;                     % CA-CFAR
 Th_Os=4.12; k_Os = window_size*7/8;                 % OS-CFAR
@@ -22,7 +22,7 @@ T_WAI = 19.75; n_WAI = 0.9;                         % WAI-CFAR
 
 SNR = 10.^(0.1.*SNR_dB);
 L = length(SNR);
-% Preallocating variables
+% Preallocate variables
 [Pfa_CA, Pd_CA, Pfa_OS ,Pd_OS, ...
     Pfa_CHA, Pd_CHA, Pfa_TM, Pd_TM, ...
     Pfa_WAI,Pd_WAI] = deal(zeros(window_size+1,1));
