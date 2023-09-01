@@ -23,7 +23,7 @@ T_WAI = 19.75; n_WAI = 0.9;                         % WAI-CFAR
 
 SNR = 10.^(0.1.*SNR_dB);
 L = length(SNR);
-% Preallocating variables
+% Preallocate variables
 [Pfa_CA, Pd_CA, Pfa_OS ,Pd_OS, ...   
     Pfa_CHA, Pd_CHA, Pfa_TM, Pd_TM, ...
     Pfa_WAI,Pd_WAI, idel_pfa,ideal_pd] = deal(zeros(L,1));
